@@ -1,0 +1,44 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #F5C542;
+  --peach: #F7B7A3;
+  --white: #FFFFFF;
+  --dark-blue: #1A2A40;
+  --soft-gray: #EAEAEA;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+  color: var(--dark-blue);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.app {
+  max-width: 1920px;
+}
+
+/* AOS Custom Animations */
+[data-aos="fade-heart"] {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1s ease;
+}
+
+[data-aos="fade-heart"].aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -1,0 +1,356 @@
+/* components/Gallery.css */
+.gallery-section {
+  padding: 50px 20px;
+  background: var(--white);
+}
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 12px 30px;
+  background: var(--soft-gray);
+  border: none;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.category-btn.active {
+  background: linear-gradient(135deg, var(--gold), var(--peach));
+  color: var(--white);
+  box-shadow: 0 5px 20px rgba(245, 197, 66, 0.3);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .image-container img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(26, 42, 64, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-title {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.like-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.like-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.heart-icon {
+  color: var(--white);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.heart-icon.liked {
+  color: #ff4757;
+  animation: heartBeat 0.5s ease;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* Lightbox Styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-content {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 1200px;
+  width: 100%;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  color: var(--white);
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(90deg);
+}
+
+.lightbox-main {
+  padding: 40px 40px 20px;
+}
+
+.lightbox-swiper {
+  height: 500px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lightbox-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-thumbs {
+  height: 100px;
+}
+
+.lightbox-thumbs .swiper-slide {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.lightbox-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.lightbox-thumbs img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lightbox-info {
+  padding: 20px 40px 40px;
+  background: var(--soft-gray);
+}
+
+.lightbox-title {
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.lightbox-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--dark-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.action-btn .liked {
+  color: #ff4757;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.view-more-btn {
+  padding: 18px 40px;
+  background: linear-gradient(135deg, var(--gold), var(--peach));
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(245, 197, 66, 0.3);
+}
+
+.view-more-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(245, 197, 66, 0.4);
+  gap: 20px;
+}
+
+.view-more-btn .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .lightbox-content {
+    max-height: 80vh;
+  }
+  
+  .lightbox-main {
+    padding: 20px 20px 10px;
+  }
+  
+  .lightbox-swiper {
+    height: 400px;
+  }
+  
+  .lightbox-info {
+    padding: 15px 20px 30px;
+  }
+  
+  .lightbox-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-filter {
+    gap: 10px;
+  }
+  
+  .category-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lightbox-swiper {
+    height: 300px;
+  }
+  
+  .lightbox-thumbs {
+    height: 70px;
+  }
+}

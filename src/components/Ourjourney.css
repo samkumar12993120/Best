@@ -1,0 +1,246 @@
+/* components/OurJourney.css */
+.our-journey-section {
+  padding: 50px 20px;
+  background: var(--dark-blue);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.our-journey-section .section-title {
+  color: var(--white);
+}
+
+.our-journey-section .section-subtitle {
+  text-align: center;
+  color: var(--peach);
+  font-size: 1.2rem;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--gold), var(--peach));
+  border-radius: 2px;
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 80px;
+  width: calc(50% - 40px);
+}
+
+.timeline-event.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-event.right {
+  left: calc(50% + 40px);
+  text-align: left;
+}
+
+.event-content {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.event-content:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--gold), var(--peach));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.timeline-event.left .event-icon {
+  right: -80px;
+  top: 20px;
+}
+
+.timeline-event.right .event-icon {
+  left: -80px;
+  top: 20px;
+}
+
+.event-details {
+  position: relative;
+  z-index: 1;
+}
+
+.event-year {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.event-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.event-connector {
+  position: absolute;
+  top: 40px;
+  width: 30px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.timeline-event.left .event-connector {
+  right: -30px;
+}
+
+.timeline-event.right .event-connector {
+  left: -30px;
+}
+
+.event-hover-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  z-index: 0;
+}
+
+.hover-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--gold), var(--peach), var(--gold));
+  border-radius: 17px;
+  z-index: -1;
+  animation: glow 2s ease-in-out infinite alternate;
+  opacity: 0.3;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.journey-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-event {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    margin-bottom: 60px;
+  }
+  
+  .timeline-line {
+    left: 30px;
+  }
+  
+  .timeline-event.left .event-icon,
+  .timeline-event.right .event-icon {
+    left: -50px;
+    right: auto;
+    top: 20px;
+  }
+  
+  .timeline-event.left .event-connector,
+  .timeline-event.right .event-connector {
+    left: -30px;
+    right: auto;
+  }
+  
+  .event-content {
+    margin-left: 50px;
+  }
+  
+  .journey-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: 30px 20px;
+  }
+}
