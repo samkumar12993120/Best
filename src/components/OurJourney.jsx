@@ -9,11 +9,11 @@ const timelineEvents = [
 , icon: '❤️', side: 'left' },
   { id: 2, year: '2024',date:'14/09',title: 'First Date', description: "Met at a coffee shop… and ended up talking for hours without even noticing."
 , icon: '☕', side: 'right' },
-  { id: 3, year: '2024', date:'1/07', title: 'Official Couple', description: "Made it official on a starry night—where their love grew, stayed strong, and they later proposed to each other."
+  { id: 3, year: '2024', date:'1/09', title: 'Official Couple', description: "Made it official on a starry night—where their love grew, stayed strong, and they later proposed to each other."
 , icon: '⭐', side: 'left' },
   { id: 4, year: '2025', title: 'First Trip Together', date:'12/03', description: 'Weekend getaway to the mountains', icon: '🏔️', side: 'right' },
   { id: 5, year: '2024', title: 'Moving Onwards', date:'24/10', description: 'Began our new life together in our cozy home in Coiambatore.', icon: '🏡', side: 'left' },
-  { id: 6, year: '2024', title: 'The Proposal', date:'1/07', description: 'He proposed on a beach at sunset', icon: '💍', side: 'right' },
+  { id: 6, year: '2024', title: 'The Proposal', date:'1/09', description: 'He proposed on a beach at sunset', icon: '💍', side: 'right' },
   { id: 7, year: '2024', title: 'Wedding Planning',  date:'16/11', description: 'Started planning our dream wedding', icon: '📋', side: 'left' },
   { id: 8, year: '2024', title: 'Engagement Party',date:'20/11', description: 'Celebrated with family and friends', icon: '🎉', side: 'right' },
   { id: 9, year: '2025', title: 'Wedding Day', date:'09/03',description: 'Our beautiful wedding ceremony', icon: '👰', side: 'left' },
