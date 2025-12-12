@@ -8,7 +8,7 @@
 }
 
 .our-journey-section .section-title {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .our-journey-section .section-subtitle {

@@ -9,33 +9,31 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Banner.css';
+import banner1 from '../assets/images/jpg/BANNER-1.jpg';
+import banner2 from '../assets/images/jpg/BANNER-1.jpg';
+import banner3 from '../assets/images/jpg/BANNER-1.jpg';
 
 const banners = [
   {
     id: 1,
     title: "Two hearts, one journey.",
     subtitle: "From lovers to life partners — forever begins now.",
-    background: "linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+    background: `linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url(${banner1})`
   },
   {
     id: 2,
     title: "Once lovers, now husband and wife.",
     subtitle: "A beautiful love story becomes a lifetime bond.",
-    background: "linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+    background: `linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url(${banner2})`
   },
   {
     id: 3,
     title: "From love to marriage…",
     subtitle: "Their forever story has officially begun.",
-    background: "linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-  },
-  {
-    id: 4,
-    title: "Together in love. Together in life. Forever.",
-    subtitle: "",
-    background: "linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
+    background: `linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.5)), url(${banner3})`
   }
 ];
+
 
 const Banner = () => {
   const swiperRef = useRef(null);

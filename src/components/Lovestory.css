@@ -14,11 +14,10 @@
   margin-bottom: 80px;
 }
 
-.section-title {
-  font-size: 3rem;
-  color: var(--dark-blue);
-  margin-bottom: 20px;
-  position: relative;
+.text-white {
+  font-size: 3rem !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
 }
 
 .title-underline {
@@ -43,13 +42,13 @@
 
 .main-image {
   width: 100%;
-  height: 400px;
+  height: 550px;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(26, 42, 64, 0.1);
   position: absolute;
   left: 0;
-  top: 50px;
+  top: -30px;
 }
 
 .main-image img {

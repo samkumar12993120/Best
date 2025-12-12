@@ -70,15 +70,6 @@
   cursor: pointer;
 }
 
-.mouse {
-  width: 30px;
-  height: 50px;
-  border: 2px solid var(--gold);
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-}
 
 .wheel {
   width: 4px;

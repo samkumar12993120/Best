@@ -5,18 +5,20 @@ import { FaHeart, FaMapMarkerAlt, FaCalendarAlt, FaGlassCheers } from 'react-ico
 import './Ourjourney.css';
 
 const timelineEvents = [
-  { id: 1, year: '2015', title: 'First Meeting', description: 'Met at college festival, instant connection', icon: '❤️', side: 'left' },
-  { id: 2, year: '2016', title: 'First Date', description: 'Coffee turned into dinner, talked for hours', icon: '☕', side: 'right' },
-  { id: 3, year: '2017', title: 'Official Couple', description: 'Made it official on a starry night', icon: '⭐', side: 'left' },
-  { id: 4, year: '2018', title: 'First Trip Together', description: 'Weekend getaway to the mountains', icon: '🏔️', side: 'right' },
-  { id: 5, year: '2019', title: 'Moving In', description: 'Started our life together in a new apartment', icon: '🏡', side: 'left' },
-  { id: 6, year: '2020', title: 'The Proposal', description: 'He proposed on a beach at sunset', icon: '💍', side: 'right' },
-  { id: 7, year: '2021', title: 'Wedding Planning', description: 'Started planning our dream wedding', icon: '📋', side: 'left' },
-  { id: 8, year: '2022', title: 'Engagement Party', description: 'Celebrated with family and friends', icon: '🎉', side: 'right' },
-  { id: 9, year: '2023', title: 'Wedding Day', description: 'Our beautiful wedding ceremony', icon: '👰', side: 'left' },
-  { id: 10, year: '2024', title: 'Honeymoon', description: 'Two weeks in paradise', icon: '🌴', side: 'right' },
-  { id: 11, year: '2025', title: 'First Home', description: 'Bought our first house together', icon: '🏠', side: 'left' },
-  { id: 12, year: 'Future', title: 'Forever Together', description: 'Many more beautiful moments to come', icon: '∞', side: 'right' }
+  { id: 1, year: '2024',date:'14/09' , title: 'First Meeting', description: "Everything started with a spark during that memorable marriage function."
+, icon: '❤️', side: 'left' },
+  { id: 2, year: '2024',date:'14/09',title: 'First Date', description: "Met at a coffee shop… and ended up talking for hours without even noticing."
+, icon: '☕', side: 'right' },
+  { id: 3, year: '2024', date:'1/07', title: 'Official Couple', description: "Made it official on a starry night—where their love grew, stayed strong, and they later proposed to each other."
+, icon: '⭐', side: 'left' },
+  { id: 4, year: '2025', title: 'First Trip Together', date:'12/03', description: 'Weekend getaway to the mountains', icon: '🏔️', side: 'right' },
+  { id: 5, year: '2024', title: 'Moving Onwards', date:'24/10', description: 'Began our new life together in our cozy home in Coiambatore.', icon: '🏡', side: 'left' },
+  { id: 6, year: '2024', title: 'The Proposal', date:'1/07', description: 'He proposed on a beach at sunset', icon: '💍', side: 'right' },
+  { id: 7, year: '2024', title: 'Wedding Planning',  date:'16/11', description: 'Started planning our dream wedding', icon: '📋', side: 'left' },
+  { id: 8, year: '2024', title: 'Engagement Party',date:'20/11', description: 'Celebrated with family and friends', icon: '🎉', side: 'right' },
+  { id: 9, year: '2025', title: 'Wedding Day', date:'09/03',description: 'Our beautiful wedding ceremony', icon: '👰', side: 'left' },
+  { id: 10, year: '2025',  date:'12/03',  title: 'Honeymoon', description: 'Two weeks in paradise', icon: '🌴', side: 'right' },
+  { id: 11, year: '2025', title: 'Forever Together', description: 'Many more beautiful moments to come', icon: '∞', side: 'left' },
 ];
 
 const OurJourney = () => {
@@ -51,6 +53,9 @@ const OurJourney = () => {
 
                 <div className="event-details">
                   <div className="event-year">{event.year}</div>
+                  <div className="event-date">{event.date}</div>
+
+
                   <h3 className="event-title">{event.title}</h3>
                   <p className="event-description">{event.description}</p>
                 </div>
@@ -71,31 +76,7 @@ const OurJourney = () => {
           ))}
         </div>
 
-        <div className="journey-stats" data-aos="fade-up">
-          <div className="stat-card">
-            <FaCalendarAlt className="stat-icon" />
-            <div className="stat-number">10+</div>
-            <div className="stat-label">Years Together</div>
-          </div>
-
-          <div className="stat-card">
-            <FaMapMarkerAlt className="stat-icon" />
-            <div className="stat-number">15+</div>
-            <div className="stat-label">Cities Visited</div>
-          </div>
-
-          <div className="stat-card">
-            <FaHeart className="stat-icon" />
-            <div className="stat-number">∞</div>
-            <div className="stat-label">Memories Made</div>
-          </div>
-
-          <div className="stat-card">
-            <FaGlassCheers className="stat-icon" />
-            <div className="stat-number">1</div>
-            <div className="stat-label">Beautiful Wedding</div>
-          </div>
-        </div>
+     
 
       </div>
     </section>

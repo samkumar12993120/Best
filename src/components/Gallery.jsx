@@ -10,24 +10,29 @@ import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 import 'swiper/css/zoom';
 import './Gallery.css';
+import img3 from '../assets/images/3.jpg';
+import img4 from '../assets/images/4.jpg';
+import img5 from '../assets/images/5.jpg';
+import img7 from '../assets/images/7.jpg';
+import img8 from '../assets/images/8.jpg';
+import img9 from '../assets/images/9.jpg';
+
 
 const galleryImages = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80', category: 'ceremony', title: 'The Wedding Vows' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80', category: 'reception', title: 'First Dance' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?auto=format&fit=crop&w=800&q=80', category: 'portrait', title: 'Golden Hour Portraits' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80', category: 'ceremony', title: 'Ring Exchange' },
-  { id: 5, url: 'https://images.unsplash.com/photo-1529254479751-fbacb4c7a587?auto=format&fit=crop&w=800&q=80', category: 'details', title: 'Wedding Details' },
-  { id: 6, url: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=800&q=80', category: 'reception', title: 'Celebration Time' },
-  { id: 7, url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80', category: 'portrait', title: 'Couple Portraits' },
-  { id: 8, url: 'https://images.unsplash.com/photo-1544717305-99670f9c28f4?auto=format&fit=crop&w=800&q=80', category: 'details', title: 'Wedding Decor' }
+  { id: 1, url: img5, category: 'ceremony', title: 'The Wedding Vows' },
+  { id: 2, url: img4, category: 'reception', title: 'First Dance' },
+  { id: 3, url: img9, category: 'portrait', title: 'Golden Hour Portraits' },
+  { id: 4, url: img7, category: 'ceremony', title: 'Ring Exchange' },
+  { id: 6, url: img3, category: 'reception', title: 'Celebration Time' },
+  { id: 7, url: img8, category: 'portrait', title: 'Couple Portraits' },
 ];
+
 
 const categories = [
   { id: 'all', name: 'All Photos' },
   { id: 'ceremony', name: 'Ceremony' },
   { id: 'reception', name: 'Reception' },
   { id: 'portrait', name: 'Portraits' },
-  { id: 'details', name: 'Details' }
 ];
 
 const Gallery = () => {
@@ -62,7 +67,7 @@ const Gallery = () => {
     <section className="gallery-section" id="gallery">
       <div className="container">
         <div className="section-header" data-aos="fade-up">
-          <h2 className="section-title">Our Gallery</h2>
+          <h2 className="text-white"style={{ color: "black" }}>Our Gallery</h2>
           <div className="title-underline"></div>
           <p className="section-subtitle">Capturing precious moments from our special day</p>
         </div>
@@ -191,13 +196,7 @@ const Gallery = () => {
           )}
         </AnimatePresence>
 
-        {/* View More Button */}
-        <div className="view-more-container" data-aos="fade-up">
-          <button className="view-more-btn">
-            View All Photos
-            <span className="arrow">→</span>
-          </button>
-        </div>
+      
 
       </div>
     </section>
