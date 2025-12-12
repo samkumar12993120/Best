@@ -4,7 +4,7 @@ import Banner from './components/Banner';
 import LoveStory from './components/LoveStory';
 import OurJourney from './components/OurJourney';
 import Gallery from './components/Gallery';
-import IncidentsSection from './components/IncidentsSection';
+// import IncidentsSection from './components/IncidentsSection';
 
 import './App.css';
 import 'aos/dist/aos.css';
@@ -25,7 +25,7 @@ function App() {
       <LoveStory />
       <OurJourney />
       <Gallery />
-      <IncidentsSection/>
+      {/* <IncidentsSection/> */}
     </div>
   );
 }
